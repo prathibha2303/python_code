@@ -1,0 +1,33 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Convert the below list into numpy array then display the array
+Input: my_list = [1, 2, 3, 4, 5]
+Code:
+import numpy as np										# Import the numpy library
+my_list = [1, 2, 3, 4, 5]									#creating a list
+print("the list is:",my_list)									#printing the list
+my_array=np.array(my_list)									#converting the list into numpy array
+print("the numpy array is:",my_array)								#printing the numpy array
+
+Output:
+the list is: [1, 2, 3, 4, 5]
+the numpy array is: [1 2 3 4 5]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Convert the below list into a numpy array then display the array then display the first and last index and then multiply each element by 2 and display the result.
+Input: my_list = [1, 2, 3, 4, 5]
+Code:
+import numpy as np										# Import the numpy library
+my_list = [1, 2, 3, 4, 5]									#creating a list
+my_array=np.array(my_list)									#converting the list into numpy array
+print("the numpy array is:",my_array)								#printing the nympy array
+slicing=my_array[0::4]									#slicing 
+print("the first and last elements is:",slicing)							#printing the slicing
+multi=my_array*2										#multiplying the array with 2
+print("the multiplication of list by 2:",multi)							#printing the array
+
+Output:
+the numpy array is: [1 2 3 4 5]
+the first and last elements is: [1 5]
+the multiplication of list by 2: [ 2  4  6  8 10]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
