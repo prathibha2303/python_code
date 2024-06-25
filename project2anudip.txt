@@ -1,0 +1,73 @@
+1.using input()function take one number from the user using ternary operator check weather the number is even or odd
+
+
+num=int(input("enter the number:"))                                      #taking the input from the user using input()function
+output="even" if num%2==0 else "odd"                                     #checking the condition using ternary operator that the number is even or odd
+print("the number is:",output)                                           #printing the resultant
+
+
+
+Output 1:
+enter the number:6
+the number is: even
+
+Output 2:
+enter the number:7
+the number is: odd
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.using input function take two numbers and then swap the numbers
+
+
+num1=int(input("enter the first number:"))                               #taking the first number from the user using input() function           
+num2=int(input("enter the second number:"))                              #taking the second number from the user using input() function
+print("before swapping the number:",num1,num2)                           #printing the numbers before swapping
+temp=num1                                                                #swapping the numbers unsing temp variables                                                                
+num1=num2
+num2=temp
+print("after swapping the number: ",num1,num2)                           #printning the value after swapping
+
+
+
+Output :
+
+enter the first number:4
+enter the second number:7
+before swapping the number: 4 7
+after swaping the number:  7 4
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.write a program to convert kilometers to miles
+
+
+kilometres=int(input("enter the km:"))                                  #taking input from the user using input() function
+miles=kilometres*0.6213711922                                           #coverting kilometers into miles
+print("the entered km is:", kilometres)                                 #printing the number which has entered by the user
+print("the miles for given km is:",miles)                               #printing the miles which has been coverted from the kilometers 
+ 
+
+Output:
+
+enter the km:10
+the entered km is: 10
+the miles for given km is: 6.213711922
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4.find the simple interest on RS.200 for 5 years at 5% per year
+
+
+principal=200                                                          #assighning values to the variables
+rate=5
+year=5
+interest=(principal*rate*year)/100                                     #calculating the interest using formula
+print("the sample interest is:",interest)                              #printing the calculated interest
+
+
+Output:
+
+the sample interest is: 50.0
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,84 @@
+1. Write a python program to reverse a number using a while loop. 
+
+number = int(input("enter the number:"))						#user input
+def reverse_number(number):							#declaring the function
+    reversed_number = 0
+    while number > 0:								#while condition
+        digit = number % 10
+        reversed_number = reversed_number * 10 + digit
+        number //= 101
+    return reversed_number
+reversed_num = reverse_number(number)
+print("Original number:", number)						#print statements
+print("Reversed number:", reversed_num)					#print statements
+
+Output:
+enter the number:987654321
+Original number: 987654321
+Reversed number: 123456789
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Write a python program to check whether a number is palindrome or not? 
+
+number = int(input("enter the number:"))						#user input
+def is_palindrome(number):							#declaring the function
+    original_number = number
+    reversed_number = 0
+    while number > 0:								#while condition
+        digit = number % 10
+        reversed_number = reversed_number * 10 + digit
+        number //= 10
+    return original_number == reversed_number
+if is_palindrome(number):							#conditional statements
+    print(number, "is a palindrome")						#print statements
+else:									#conditional statements
+    print(number, "is not a palindrome")						#print statements
+
+Output 1:
+enter the number:3456
+3456 is not a palindrome
+
+Output 2:
+enter the number:121
+121 is a palindrome
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Write a python program finding the factorial of a given number using a while loop. 
+
+number = int(input("enter the number:"))					#user input
+def factorial(n):							#declaring the function
+    if n < 0:								#conditional statements
+        print("Factorial is not defined for negative numbers")			#print statements
+    elif n == 0:							#conditional statements
+        return 1
+    else:
+        result = 1
+        while n > 0:
+            result *= n
+            n -= 1
+        return result
+print("Factorial of", number, "is", factorial(number))				#print statements
+
+Output:
+enter the number:4
+Factorial of 4 is 24
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Accept numbers using input() function until the user enters 0. If user input 0 then break the while loop and display the sum of all the numbers.
+
+total = 0
+while True:							#while loop
+    num = int(input("Enter a number (enter 0 to exit): "))			#user input
+    if num == 0:							#conditional statements
+        break							#break statements
+    total += num
+print("Sum of all numbers:", total)					#print statements
+
+Output:
+Enter a number (enter 0 to exit): 10
+Enter a number (enter 0 to exit): 20
+Enter a number (enter 0 to exit): 30
+Enter a number (enter 0 to exit): 40
+Enter a number (enter 0 to exit): 50
+Enter a number (enter 0 to exit): 0
+Sum of all numbers: 150

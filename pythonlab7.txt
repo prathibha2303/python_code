@@ -1,0 +1,87 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Write a Python program to count the occurrences of each word in a given sentence 
+string = “To change the overall look of your document. To change the look available in the gallery” 
+
+Code:
+words = "To change the overall look of your document. To change the look available in the gallery".split()							#split() is used to break the sentence into words
+word_count = {}																#empty dictionary 
+for word in words:																#count occurrences of each world
+    if word in word_count:															#if word alredy present then it will increment
+        word_count[word] += 1
+    else:																	#else statements
+        word_count[word] = 1
+print("the occurrences of each word in a given sentence are:")											#print statements
+for word, count in word_count.items():														#to print the result
+    print(f"{word}:{count}")
+
+
+Output:
+the occurrences of each word in a given sentence are:
+To:2
+change:2
+the:3
+overall:1
+look:2
+of:1
+your:1
+document.:1
+available:1
+in:1
+gallery:1
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Write a Python program to remove a newline in Python 
+String = "\nBest \nDeeptech \nPython \nTraining\n" 
+
+Code:
+string = "\nBest \nDeeptech \nPython \nTraining\n"													#string
+string_replace = string.replace("\n", "")														#replacing the string with altest 2 charecter
+print("string with new line:", string)														#print string with newline
+print("String without newline:", string_replace)													#print string without newline
+
+Output:
+string with new line: 
+Best 
+Deeptech 
+Python 
+Training
+
+String without newline: Best Deeptech Python Training
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Write a Python program to reverse words in a string 
+String = “Deeptech Python Training” 
+
+Code:
+string = "Deeptech Python Training ".split()													#split() is used to break the sentence into words
+print("before reverse:", string)															#print statements
+word = string[::-1]																#silcing
+string_reverse = " ".join(word)															#join reverse words 
+print("after reverse:", string_reverse)														#print statements
+
+Output:
+before reverse: ['Deeptech', 'Python', 'Training']
+after reverse: Training Python Deeptech
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Write a Python program to count and display the vowels of a given text String=”Welcome to python Training
+
+Code:
+string = "Welcome to Python Training"														#string
+print("the given string is:", string)														#print statements
+string = string.lower()															#converthing given string to lower
+vowel_counts = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}													#vowel
+for char in string:																#for conditionthat goes through all the world in the string
+    if char in vowel_counts:															#checks if it's vowel or not
+        vowel_counts[char] += 1
+print("Vowel counts:")															#print statements
+for vowel, count in vowel_counts.items():
+    print(f"{vowel}: {count}")
+Output:
+the given string is: Welcome to Python Training
+Vowel counts:
+a: 1
+e: 2
+i: 2
+o: 3
+u: 0

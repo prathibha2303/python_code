@@ -1,0 +1,61 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Write a Python program to find the number of times 4 appears in the tuple. 
+Input: tuplex = (2, 4, 5, 6, 2, 3, 4, 4, 7 ) 
+Output: 3 
+
+Code:
+tuplex = (2, 4, 5, 6, 2, 3, 4, 4, 7)									#creating a tuple
+count = tuplex.count(4)										#using count() function to find appeares of elements in tuple 
+print(" the Number of times 4 appears in a tiple is :", count)							#print statements
+
+Output:
+the Number of times 4 appears in a tiple is : 3
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.Write a Python program to convert a list to a tuple. 
+Input: listx = [5, 10, 7, 4, 15, 3] 
+Output: (5, 10, 7, 4, 15, 3) 
+
+Code:
+listx = [5, 10, 7, 4, 15, 3]									#list created
+new_tuple = tuple(listx)									#converting list to tuple using tuble() function
+print("the tuple is:", new_tuple)								#print statements								
+
+Output:
+the tuple is: (5, 10, 7, 4, 15, 3)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Write a Python program to calculate the sum of the numbers in a given tuple. 
+Input: tuples_list = [(1, 2), (3, 4), (5, 6)]
+
+Code:
+tuple_and_list = [(1, 2), (3, 4), (5, 6)]								#creating tuple inside list
+total_sum = 0										#initialising variable
+for i in tuple_and_list:									#iterate through each tuple in list 
+    total_sum += sum(i)									#adding the tuple
+print("the sum is:", total_sum)									#print statements
+
+Output:
+the sum is: 21
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.Write a python program and iterate the given tuples
+Input: 
+employee1 = ("John Doe", 101, "Human Resources", 60000) 
+employee2 = ("Alice Smith", 102, "Marketing", 55000) 
+employee3 = ("Bob Johnson", 103, "Engineering", 75000)
+
+Code:
+employee1 = ("John Doe", 101, "Human Resources", 60000)						#creating tuple with name employee1
+employee2 = ("Alice Smith", 102, "Marketing", 55000)							#creating tuple with name employee1
+employee3 = ("Bob Johnson", 103, "Engineering", 75000)							#creating tuple with name employee1
+for employee in [employee1, employee2, employee3]:							#iterating through each tuple
+    print(employee)											#print statements
+
+Output:
+
+('John Doe', 101, 'Human Resources', 60000)
+('Alice Smith', 102, 'Marketing', 55000)
+('Bob Johnson', 103, 'Engineering', 75000)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

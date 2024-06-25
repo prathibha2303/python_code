@@ -1,0 +1,55 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.Declare a div() function with two parameters. Then call the function and pass two numbers and display their division. 
+
+num1 = int(input("enter the value for num1:"))		#user input
+num2 = int(input("enter the value for num2:"))		#user input
+def div(num1, num2):				#declaring function
+    return num1/num2
+division = div(num1, num2)				#callinf the function
+print("the division is:", division)				#print statement
+
+Output:
+enter the value for num1:20
+enter the value for num2:2
+the division is: 10.0
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Declare a square() function with one parameter. Then call the function and pass one number and display the square of that number .
+
+num = int(input("enter the number:"))			#user input
+def square(num):					#declaring function
+    return num*num
+result = square(num)				#calling the function
+print("the square is:", result)				#print statements
+
+Output:
+enter the number:12
+the square is: 144
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Using max() and min() functions display the maximum and minimum of 5 random numbers.
+
+numbers = [100, 1, 5, 20, 37]				#declaring the list
+print("the numbers are:", numbers)			#print statements
+maximum = max(numbers)				#declaring max function
+minimum = min(numbers)				#declaring min function
+print("the maximum number in a list is:", maximum)		#print statements
+print("the minimum number in a list is:", minimum)		#print statements
+
+Output:
+the numbers are: [100, 1, 5, 20, 37]
+the maximum number in a list is: 100
+the minimum number in a list is: 1
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Accept a name from the user and display that in lower case using lower() function
+
+name = input("Enter your name: ")		#user input
+lowname = name.lower()			#declaring lowercase function 
+print("Name in lowercase:", lowname)		#print statements
+
+Output:
+Enter your name: Hello World
+Name in lowercase: hello world
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

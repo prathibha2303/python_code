@@ -1,0 +1,46 @@
+------------------------------------------------------------------------------------------------------------------------------
+1. Calculate the multiplication and sum of two numbers
+
+num1 = 10                                				#declaring the variables
+num2 = 2                                  			             	#declaring the variable
+product = (num1*num2)            				#condition
+add = (num1+num2)                 				#condition
+print("multiply:", product)          				#print statement
+print("addition:", add)               				#print statement
+
+output:
+multiply: 20
+addition: 12
+
+---------------------------------------------------------------------------------------------------------------------------
+2. Declare two variables and print that which variable is largest using ternary
+
+a = 5                                              			#declaring the variable
+b = 7                                              			#declaring the variable
+num = True if a < b else False        			#ternary
+print(num)                                     			#print statement
+
+output:
+True
+
+--------------------------------------------------------------------------------------------------------------------------
+3. Python program to convert the temperature in degree centigrade to Fahrenheit
+
+celsius = 20                                                             		#declaring variable
+fahrenheit = (celsius*9/5)+32                                    		#condition
+print("temperature in fahrenheit is:", fahrenheit)        		#print statement
+
+output:
+temperature in fahrenheit is: 68.0
+
+-------------------------------------------------------------------------------------------------------------------------
+4. Python program to find the area of a triangle whose sides are given
+
+base = 3                                        			#declaring variable 
+height = 5                                      			#declaring the variable
+area = 0.5*(base*height)                			#condition
+print("area of triangle is:", area)      			#print statement
+
+output:
+area of triangle is: 7.5
+------------------------------------------------------------------------------------------------------------------------	

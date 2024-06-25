@@ -1,0 +1,138 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Suppose you have a dataset containing daily temperature readings for a city, and you want to identify days with extreme temperature conditions. Find days where the temperature either exceeded 35 degrees Celsius (hot day) or dropped below 5 degrees Celsius (cold day).
+
+Input:
+temperatures = np.array([32.5, 34.2, 36.8, 29.3, 31.0, 38.7, 23.1, 18.5, 22.8, 37.2])
+
+Code:
+import numpy as np													#importing numpy
+temperatures = np.array([32.5, 34.2, 36.8, 29.3, 31.0, 38.7, 23.1, 18.5, 22.8, 37.2, 4.0, 15.6, 28.4, -4.0, -12.0])			#declaring array
+hot_days = np.where(temperatures > 35)[0] + 1										#condition for temperatures >32(hot days)
+cold_days = np.where(temperatures < 5)[0] + 1										#condition for temperature<5(cold days)
+print("Hot Days:")													#print statements
+for day in hot_days:													#using for loop
+    print(f"Day {day}: {temperatures[day - 1]}°C")										# Adjust the index by subtracting 1 to match 1-based day counting.
+print("\nCold Days:")												#print statements
+for day in cold_days:												#using for loop
+    print(f"Day {day}: {temperatures[day - 1]}°C")										# Adjust the index by subtracting 1 to match 1-based day counting.
+
+
+Output:
+Hot Days:
+Day 3: 36.8°C
+Day 6: 38.7°C
+Day 10: 37.2°C
+
+Cold Days:
+Day 11: 4.0°C
+Day 14: -4.0°C
+Day 15: -12.0°C
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.Suppose you have a dataset containing monthy sales data for a comapny, and you want to split
+this data into quality reports for analysis and reporting purposes.
+
+Input:
+monthly_sales=np.array([120,135,148,165,180,155,168,190,205,198,210,225])
+
+Code:
+import numpy as np									#importing the numpy
+monthly_sales = np.array([120, 135, 148, 165, 180, 155, 168, 190, 205, 198, 210, 225])		#declaring the array
+quarter_sales = monthly_sales.reshape(4, 3)						# Reshape the monthly sales data into quarters
+print("Quarter 1 Sales (in thousands of dollars):")						#print statements
+print(quarter_sales[0])								
+print("\nQuarter 2 Sales (in thousands of dollars):")					#print statements
+print(quarter_sales[1])
+print("\nQuarter 3 Sales (in thousands of dollars):")					#print statements
+print(quarter_sales[2])
+print("\nQuarter 4 Sales (in thousands of dollars):")					#print statements
+print(quarter_sales[3])
+
+Output:
+Quarter 1 Sales (in thousands of dollars):
+[120 135 148]
+
+Quarter 2 Sales (in thousands of dollars):
+[165 180 155]
+
+Quarter 3 Sales (in thousands of dollars):
+[168 190 205]
+
+Quarter 4 Sales (in thousands of dollars):
+[198 210 225]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.Suppose you have a dataset containing customer data, and you want to split this 
+data into two groups: one group for customers who made a purchase in the last 
+30 days and another group for customers who haven't made a purchase in the last 
+30 days.
+
+Input:
+customer_ids=np.array([101,102,103,104,105,106,107,108,109,110])
+last_purchase_days_ago=np.array([5,15,20,25,30,35,40,45,50,55])
+
+Code:
+import numpy as np									#importing the numpy
+customer_ids = np.array([101, 102, 103, 104, 105, 106, 107, 108, 109, 110])			#declaring the array
+last_purchase_days_ago = np.array([5, 15, 20, 25, 30, 35, 40, 45, 50, 55])			#declaring the array
+active_customers = customer_ids[last_purchase_days_ago <= 30]				#Find active customers (last purchase <= 30 days ago)
+inactive_customers = customer_ids[last_purchase_days_ago > 30]				# Find inactive customers (last purchase > 30 days ago)
+print("Active Customers (last Purchase <= 30 days ago):")					#print statements
+print(active_customers)
+print("\nInactive Customers (last purchase > 30 days ago):")					#print statements
+print(inactive_customers)
+
+Output:
+Active Customers (last Purchase <= 30 days ago):
+[101 102 103 104 105]
+
+Inactive Customers (last purchase > 30 days ago):
+[106 107 108 109 110]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.Suppose you have two sets of employee data--one containing information about
+full-time employees and another cointaining information about part-time employees.
+You want to combine this data to create a comprehensive employee dataset for 
+HR analysis.
+
+Input:
+#Employee data for full-time employees
+full_time_employees=np.array([
+[101,'John Doe','Full-Time',55000],
+[102,'Jane Smith','Full-Time',60000],
+[103,'Mike Johnson','Full-Time',52000]
+])
+
+#Employee data for part-time employees
+part_time_employees=np.array([
+[201,'Alice Brown','Part-Time',25000],
+[202,'Bob Wilson','Part-Time',28000],
+[203,'Emily Davis','Part-Time',22000]
+])
+
+Code:
+import numpy as np												#importing the numpy
+full_time_employees = np.array([										#declaring the array
+    [101, 'John Doe', 'Full-Time', 55000],
+    [102, 'Jane Smith', 'Full-Time', 60000],
+    [103, 'Mike Johnson', 'Full-Time', 52000]
+])
+part_time_employees = np.array([										#declaring the array
+    [201, 'Alice Brown', 'Part-Time', 25000],
+    [202, 'Bob Wilson', 'Part-Time', 28000],
+    [203, 'Emily Davis', 'Part-Time', 22000]
+])
+combined_data = np.concatenate((full_time_employees, part_time_employees))						#using concatenate to combine
+print("Combined Employee data:")										#print statements
+for employe in combined_data:										#using for loop
+    print(f"Employe ID: {employe[0]}, Name: {employe[1]}, Type: {employe[2]}, Salary: {employe[3]}")				#printing the statements
+
+Output:
+Combined Employee data:
+Employee ID: 101, Name: John Doe, Type: Full-Time, Salary: 55000
+Employee ID: 102, Name: Jane Smith, Type: Full-Time, Salary: 60000
+Employee ID: 103, Name: Mike Johnson, Type: Full-Time, Salary: 52000
+Employee ID: 201, Name: Alice Brown, Type: Part-Time, Salary: 25000
+Employee ID: 202, Name: Bob Wilson, Type: Part-Time, Salary: 28000
+Employee ID: 203, Name: Emily Davis, Type: Part-Time, Salary: 22000
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

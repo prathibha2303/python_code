@@ -1,0 +1,100 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.Python program to check laep year
+
+year = int(input("enter the year:"))							#user input						
+if ((year % 4 == 0) and (year % 100 != 0) or (year % 400 == 0)):				#conditional statements
+    print(year, "is leap year.")								#prtint statements
+else:										#conditional statements
+    print(year, "is not a leap year.")							#print statements
+
+
+Output1:
+enter the year:2024
+2024 is leap year.
+
+Output2:
+enter the year:2023
+2023 is not a leap year.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.Python program to find the largest amoung three numbers
+
+num1 = int(input("enter the first number:"))						#user input
+num2 = int(input("enter the second number:"))						#user input
+num3 = int(input("enter the third number:"))						#user input
+if (num1 >= num2 and num1 >= num3):							#conditional statements
+    print("num1 is a largest number:", num1)						#print statements
+elif (num2 >= num3):									#conditional statements
+    print("num2 is a largest number:", num2)						#print statements
+else:										#conditional statements
+    print("num3 is a largest number:", num3)						#print statements
+
+Output:
+enter the first number:4
+enter the second number:9
+enter the third number:1
+num2 is a largest number: 9
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.Python Program to check if a number is Positive,Negative or 0.
+
+num = float(input("enter the number:"))							#user input
+if (num > 0):									#conditional statements
+    print("number is positive.")								#print statements
+elif (num < 0):									#conditional statements
+    print("number is negative.")								#print statements
+else:										#conditional statements
+    print("number is zero.")								#print statements
+
+Output:
+enter the number:-1
+number is negative.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4.A toy vendor supplies three types of toys: Battery Based Toys, Key-based Toys, and Electrical Charging Based Toys. The vendor gives a discount of 10% on orders for battery-based toys if the order is for more than Rs. 1000. On orders of more than Rs. 100 for key-based toys, a discount of 5% is given, and a discount of 10% is given on orders for electrical charging based toys of value more than Rs. 500. Assume that the numeric codes 1,2 and 3 are used for battery based toys, key-based toys, and electrical charging based toys respectively. Write a program that reads the product code and the order amount and prints out the net amount that the customer is required to pay after the discount.
+
+print("choose the product code.")							#print statements
+print("1.Battery based Toys.")								#print statements
+print("2.Key-based toys.")								#print statements
+print("3.Electrical charging based toys.")							#print statements
+product_code = int(input("enter your choice:"))						#user input
+amount = float(input("enter the amount:"))							#user input
+if product_code == 1 and amount >= 1000:						#conditional statements
+    discount = 0.1
+elif product_code == 2 and amount >= 100:						#conditional statements
+    discount = 0.05
+elif product_code == 3 and amount >= 500:						#conditional statements
+    discount = 0.1
+net_amount = amount-(amount*discount)							#formula
+print("net amount after discount is:rs.", net_amount)						#print statements
+
+
+output:
+choose the product code.
+1.Battery based Toys.
+2.Key-based toys.
+3.Electrical charging based toys.
+enter your choice:2
+enter the amount:400
+net amount after discount is:rs. 380.0
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5.A transport company charges the fare according to following table: Distance Charges 1-50 8 Rs./Km 51-100 10 Rs./Km > 100 12 Rs/Km
+
+distance = float(input("Enter the distance traveled (in km): "))					#user input
+if distance <= 50:									#conditional statements
+    fare = distance * 8 
+elif distance <= 100:									#conditional statements
+    fare = distance * 10
+else:										#conditional statements
+    fare = distance * 12
+print("Total fare: Rs.", fare)								#print statements
+
+Output:
+Enter the distance traveled (in km): 50
+Total fare: Rs. 400.0
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

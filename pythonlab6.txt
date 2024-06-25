@@ -1,0 +1,134 @@
+1. Print the first 10 natural numbers using for loop 
+
+print("the first 10 natural number are:")						#print statements
+for num in range(1, 11):							#for loop
+    print(num)								#print statements									
+Output:
+the first10 natural number are:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Python program to check if the given string is a palindrome 
+
+string = input("Enter string:")						 	#user input
+revstr = "" 							            	#declaring an empty string
+for i in string:								#using for loop
+    revstr = i + revstr
+print("Reversed string:", revstr)						#print statements
+if (string == revstr):								#conditional statements
+    print("The string is a palindrome.")						#print statements
+else:									#conditional statements	
+    print("The string is not a palindrome.")					#print statements
+
+Output 1:
+Enter string:Nitu
+Reversed string: utiN
+The string is not a palindrome.
+
+Output 2:
+Enter string:madam
+Reversed string: madam
+The string is a palindrome. 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Python program to check if a given number is an Armstrong number 
+
+def is_armstrong(number):									#declaring the function
+    num_str = str(number)									#converting number to string
+    power = len(num_str)									#finding length of string
+    armstrong_sum = 0									#initializing sum value to zero									
+    for digit in num_str:									#for loop
+        armstrong_sum += int(digit) ** power							#finding the power
+    if armstrong_sum == number:								#checking sum is equal to num or not
+        return True										
+    else:
+        return False
+num = int(input("Enter a number to check if it's an Armstrong number: "))				#user input
+if is_armstrong(num):									#conditional statements
+    print(num, "is an Armstrong number")							#print statements
+else:											#conditional statements
+    print(num, "is not an Armstrong number")							#print statements
+
+Output:
+Enter a number to check if it's an Armstrong number: 123
+123 is not an Armstrong number
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Python program to get the Fibonacci series between 0 to 50 
+
+f1, f2 = 0, 1
+print("fibonacci series:")									#print statements
+print(f1)											#print statements
+print(f2)											#print statements
+for i in range(0, 51):									#for loop
+    if f2 > 50:										#conditional statements
+        break										#using break to terminate from condition
+    num = f1+f2										#sum the f1 and f2
+    print(num)										#print statements
+    f1, f2 = f2, num										
+
+Output:
+fibonacci series:
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5. Python program to check the validity of password input by users
+
+def is_valid_password(password):								#declaring the function
+    if len(password) < 8:									#control statements
+        return False										#if condition false return false
+    has_uppercase = False									
+    has_lowercase = False
+    has_digit = False
+    for char in password:									#for loop
+        if char.isupper():									#conditional statements
+            has_uppercase = True
+        elif char.islower():									#conditional statements
+            has_lowercase = True
+        elif char.isdigit():
+            has_digit = True
+    if has_uppercase and has_lowercase and has_digit:						#conditional statements
+        return True
+    else:
+        return False
+def main():										#declaring function
+    while True:										#while loop
+        password = input("Enter your password: ")							#user input
+        if is_valid_password(password):
+            print("Valid password!")
+            break										#break statements
+        else:
+            print("Invalid password.")
+if __name__ == "__main__":
+    main()
+
+Output 1:
+Enter your password: Prathi@23
+Valid password!
+
+Output 2:
+Enter your password: 12345
+Invalid password.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+

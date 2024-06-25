@@ -1,0 +1,51 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Write a Python program and calculate the mean of the below dictionary. 
+test_dict = {"A" : 6, "B" : 9, "C" : 5, "D" : 7, "E" : 4} 
+Output: 6.2
+
+Code: 
+test_dict = {"A": 6, "B": 9, "C": 5, "D": 7, "E": 4}								#creating a dictionary
+mean = sum(test_dict.values()) / len(test_dict)								#calculate the mean
+print("Mean:", mean)										#print mean
+
+Output:
+Mean: 6.2
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.Write a Python script to concatenate the following dictionaries to create a new one. Sample Dictionary : 
+dic1={1:10, 2:20} dic2={3:30, 4:40} dic3={5:50,6:60} 
+Expected Result : {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60} 
+
+Code:
+dic1 = {1: 10, 2: 20}										#creating dictionary 1
+dic2 = {3: 30, 4: 40}										#creating dictionary 2
+dic3 = {5: 50, 6: 60}										#creating dictionary 3
+result_dict = {}											#creating empty dictionary
+result_dict.update(dic1)										#adding dic1 to result_dict using update() function
+result_dict.update(dic2)										#adding dic2 to result_dict using update() function
+result_dict.update(dic3)										#adding dic3 to result_dict using update() function
+print("Expected Result:", result_dict)									#print result
+
+Output:
+Expected Result: {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.Write a Python program to get the key, value and item in a dictionary. 
+input:dict_num = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+
+Code:
+dict_num = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}							#creating a dictionary
+keys = dict_num.keys()										# extracting keys from the dictionary
+values = dict_num.values()										# extracting values from the dictionary
+items = dict_num.items()										# extracting key_values from the dictionary
+print("Keys:", keys)											#print keys
+print("Values:", values)										#print values
+print("Items:", items)										#print keys and values
+
+Output:
+Keys: dict_keys([1, 2, 3, 4, 5, 6])
+Values: dict_values([10, 20, 30, 40, 50, 60])
+Items: dict_items([(1, 10), (2, 20), (3, 30), (4, 40), (5, 50), (6, 60)])
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

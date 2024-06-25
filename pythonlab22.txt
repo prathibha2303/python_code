@@ -1,0 +1,54 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.Suppose you are a teacher, and you want to analyze the exam scores of your students in a particular subject.You have recorded the scores of your students for a recent exam, and you want to represent this data using a Pandas Series.
+Input:
+students=['Alice','Bob','Charlie','David','Eve','Frank','Grace','Hannah','Ivy','Jack']
+exam_scores=[92,88,76,94,82,90,85,89,78,91]
+
+Code:
+
+import pandas as pd								#importing pandas
+students=['Alice','Bob','Charlie','David','Eve','Frank','Grace','Hannah','Ivy','Jack']			#creating list
+exam_scores=[92,88,76,94,82,90,85,89,78,91]						#creating the list 
+result=pd.Series(exam_scores,index=students)						#using Series function 
+print(result)									#printing the result
+
+Output:
+
+Alice      92
+Bob        88
+Charlie    76
+David      94
+Eve        82
+Frank      90
+Grace      85
+Hannah     89
+Ivy        78
+Jack       91
+dtype: int64
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.Suppose you want to track and analyze your household expenses for a month.You have recorded the expenses for various categories,such as groceries,utilities,rent,transportation,and entertainment.You can represent this expense data using a Pandas Series.
+Input:
+categaries=['Groceries','Utilities','Rent','Transportation','Entertainment']
+expenses=[500,200,1200,300,150]
+
+Code:
+
+import pandas as pd							#importing pandas
+categaries=['Groceries','Utilities','Rent','Transportation','Entertainment']		#creating list
+expenses=[500,200,1200,300,150]						#creating list
+result=pd.Series(expenses,index=categaries)					#using Series function
+print(result)								#printing the results
+
+Output:
+
+Groceries          500
+Utilities          200
+Rent              1200
+Transportation     300
+Entertainment      150
+dtype: int64
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

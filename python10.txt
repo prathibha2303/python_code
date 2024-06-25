@@ -1,0 +1,70 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Write a Python program to handle a ZeroDivisionError exception when dividing a number by zero. 
+Code:
+num = int(input("enter the number:"))										#user input
+division = int(input("enter the division:"))										#user input
+try:													# Starting a try block to handle potential error
+    result = num/division											# Performing division
+except ZeroDivisionError:											# Catching the specific error of division by zero
+    print("Division by zero is not allowed.")									#print an error message
+else:													#else is used to print correct result if error doesn't occur
+    print("the result is:", result)											#print the result
+
+Output:
+enter the number:20
+enter the division:0
+Division by zero is not allowed.
+
+Output2:
+enter the number:30
+enter the division:2
+the result is: 15.0
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Write a Python program that prompts the user to input an integer and raises a ValueError exception if the input is not a valid integer.
+Code:
+try:												#starting a try block to handle potential error
+    num = int(input("Enter an integer: "))									#user input
+    print("You entered:", num)										#print statements
+except ValueError:											#catching ValueError
+    print("Error: Invalid input. Please enter an integer.")							#print an error message
+
+Output:
+Enter an integer: 10
+You entered: 10
+
+Output2:
+Enter an integer: hi
+Error: Invalid input. Please enter an integer.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Write a Python program that opens a file and handles a FileNotFoundError exception if the file does not exist. 
+Code:
+try:												#staring a try block 
+    file_name = input("Enter the file name: ")								#user input				
+    file = open(file_name, 'r')										#opening a file
+    contents = file.read()										#reading a file
+    print("File contents:")										#print statements
+    print(contents)											#print the contents
+    file.close()											#closing a file
+except FileNotFoundError:										#expecting error
+    print("Error: File not found.")									#print an error message
+
+Output:
+Enter the file name: hi
+Error: File not found
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Write a Python program that prompts the user to input two numbers and raises a TypeError exception if the inputs are not numerical
+Code:
+try:											#starting a try block
+    num1 = float(input("Enter the first number: "))							#user input
+    num2 = float(input("Enter the second number: "))						#user input
+    result = num1 + num2									#adding two number
+    print("Sum of the numbers:", result)								#printing result
+except ValueError:										#expected error
+    print("TypeError: Inputs are not numerical.")							#print error message
+
+Output:
+Enter the first number: 2
+Enter the second number: a
+TypeError: Inputs are not numerical.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
