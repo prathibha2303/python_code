@@ -1,0 +1,38 @@
+1.WRITE A PYTHON PROGRAM TO READ THE RADIUS FROM THE .CSV FILE AND THEN CALCULATES THE AREA OF THE CIRCLE USING SCIPY CONSTANTS.DISPLAY THE 5 RECORDS IN THE CALCULATED RESULT
+
+Code:
+import pandas as pd
+from scipy import constants
+url = "https://raw.githubusercontent.com/AnudipAE/DANLC/master/radius_data.csv"					#Read the CSV file from the URL
+df = pd.read_csv(url)
+df['Area'] = constants.pi * (df['Radius'] ** 2)									# Calculate area of circle for each radius
+print(df.head())												# Display the first 5 records with calculated area
+
+Output:
+  CircleName    	Radius        	Area
+0        SAY  	3.798717   	45.333960
+1        PSN 	 9.958397  	311.550720
+2        JDP  	5.142711   	83.087197
+3        AUO  	3.319584   	34.619210
+4        OHG  	1.138395    	4.071325
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.WRITE A PYTHON PROGRAM TO READ THE GB FROM THE BELOW .CSV FILE AND THEN CONVERT GB TO MB USING SCIPY CONSTANTS,DISPLAY 5 RECORDS IN THE CALCULATED RESULT
+
+Code:
+import pandas as pd
+from scipy.constants import giga, mega
+file_size= pd.read_csv('https://raw.githubusercontent.com/AnudipAE/DANLC/master/file_size.csv')			# Read the file size data from the CSV file
+file_size['Size (MB)'] = file_size['Size (GB)'] * (giga / mega)							# Convert GB to MB and create a new column
+print(file_size.head())										# Display the first 5 records and save to CSV
+
+Output:
+     Filename  Size (GB)  Size (MB)
+0  file_1.txt       9.72     9720.0
+1  file_2.txt       9.81     9810.0
+2  file_3.txt       5.61     5610.0
+3  file_4.txt       4.58     4580.0
+4  file_5.txt       5.52     5520.0
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
